@@ -5,8 +5,14 @@ var PORT = process.env.PORT || 8080;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+var path = require("path");
 var mysql = require("mysql");
+
+app.get("/", function(req, res) {
+    console.log(__dirname)
+    res.sendFile(path.join(__dirname, "app/public/home.html"));
+
+  });
 
 // var connection = mysql.createConnection({
 //   host: "localhost",
