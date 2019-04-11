@@ -1,130 +1,135 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
     <meta charset="UTF-8">
     <title>FriendFinder</title>
-  
+
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
+
     <!-- Font Awesome Glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  
+
     <!-- Chosen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-  
-  </head>
+
+    <link rel="stylesheet" type="text/css" href="../data/css/style.css">
+
+</head>
 
 <body>
-    <div>
-        <header>
-            <h1>Friend Finder</h1>
-            <h2><span>Survey</span></h2>
-        </header>
-    </div>
-    <form id="questionaire">
-        <section>
-            <label for="name">Name: </label>
-            <input type="text" id="name" required="" placeholder="John Smith"></input>
-        </section>
-        <section>
-            <label for="photo">Photo URL link: </label>
-            <input type="text" id="photo" form="questionaire" required="">
-        </section>
-                <section>
-            <h3>Q1: Doughnuts are everyone's best friend.</h3>
-            <div>
-                <select id="q1" form="questionaire">
-                    <option value="default" selected="selected">Please select</option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Nuetral)</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </div>
-            <div>
-                <h3>Q2: Puppies are to evil. Like Kittens are to Aliens.</h3>
-                <select id="q2" form="questionaire">
-                    <option value="default" selected="selected">Please select</option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Nuetral)</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </div>
-            <div>
-                <h3>Q3: I enjoy sleeping on the couch.</h3>
-                <select id="q3" form="questionaire">
-                    <option value="default" selected="selected">Please select</option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Nuetral)</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </div>
-            <div>
-                <h3>Q4: HTML is the most difficult coding language.</h3>
-                <select id="q4" form="questionaire">
-                    <option value="default" selected="selected">Please select</option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Nuetral)</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </div>
-            <div>
-                <h3>Q5: Cows like chocolate covered grass.</h3>
-                <select id="q5" form="questionaire">
-                    <option value="default" selected="selected">Please select</option>
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3 (Nuetral)</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
-            </div>
-        </section>
-        <section>
-            <button class="submit" type="submit">Find your new best friend!</button>
-        </section>
-    </form>
-
-    
-    <div id="results-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-    
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">×</button>
-              <h2 class="modal-title"><strong>Best Match</strong></h2>
-            </div>
-            <div class="modal-body">
-              <h2 id="match-name"></h2>
-              <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-    
+    <div class="container">
+        <div>
+            <header>
+                <h1>Friend Finder</h1>
+                <h2><span>Survey</span></h2>
+            </header>
         </div>
-      </div>
+        <form id="questionaire">
+            <section>
+                <h3 for="name">Name (Required)</h3>
+                <input type="text" id="name" required="" placeholder="John Smith"></input>
+            </section>
+            <section>
+                <h3 for="photo">Link to Photo Image (Required)</h3>
+                <input type="text" id="photo" form="questionaire" required="">
+            </section>
+                    <section>
+                <h3>Q1: Doughnuts are everyone's best friend.</h3>
+                <div>
+                    <select id="q1" form="questionaire">
+                        <option value="default" selected="selected">Please select</option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3 (Nuetral)</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Q2: Puppies are to evil. Like Kittens are to Aliens.</h3>
+                    <select id="q2" form="questionaire">
+                        <option value="default" selected="selected">Please select</option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3 (Nuetral)</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Q3: I enjoy sleeping on the couch.</h3>
+                    <select id="q3" form="questionaire">
+                        <option value="default" selected="selected">Please select</option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3 (Nuetral)</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Q4: HTML is the most difficult coding language.</h3>
+                    <select id="q4" form="questionaire">
+                        <option value="default" selected="selected">Please select</option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3 (Nuetral)</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
+                <div>
+                    <h3>Q5: Cows like chocolate covered grass.</h3>
+                    <select id="q5" form="questionaire">
+                        <option value="default" selected="selected">Please select</option>
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3 (Nuetral)</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
+            </section>
+            <section>
+                <button class="submit" type="submit">Find your new best friend!</button>
+            </section>
+        </form>
+
+
+        <div id="results-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="match-name"></h2>
+                        <img id="match-img"
+                            src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </body>
 <footer class="footer">
     <div class="container">
-      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/ksknight85/FriendFinder">GitHub
+                Repo</a></p>
     </div>
-  </footer>
+</footer>
 
 </html>
 
@@ -154,7 +159,7 @@
                 $("#results-modal").modal("toggle");
             });
 
-                $("#name").val("");
+            $("#name").val("");
             $("#q1").val("default");
             $("#q2").val("default");
             $("#q3").val("default");
@@ -165,4 +170,3 @@
 
 
 </script>
-
