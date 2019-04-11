@@ -7,8 +7,9 @@ var PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require("./app/routes/htmlRoutes")(app);
+
 require("./app/routes/apiRoutes")(app);
+require("./app/routes/htmlRoutes")(app);
 
 app.listen(PORT, function () {
   // Log (server-side) when our server has started
